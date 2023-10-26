@@ -23,7 +23,7 @@ class GaikaexSpreadsHandler(SpreadsHandler):
         #    print("driver is already exist!")
         #    return
         #url = "https://www.gaikaex.com/gaikaex/mark/all_price_board.html"
-        url = "https://www.gaikaex.com/gaikaex/mark/rate_board.html"
+        url = "https://www.gaikaex.com/gaikaex/mark/rate_board_new.html"
         r = requests.get(url, params={})
         if r.status_code != 200:
             print("error: " + str(r.status_code))
