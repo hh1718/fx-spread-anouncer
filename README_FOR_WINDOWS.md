@@ -28,7 +28,7 @@ ImportError: No module named pywintypes
 config.jsonが設定ファイルです。
 ```
 {
-    "announce_order": ["gaikaex", "gaitame", "rakuten"], // 読み上げる会社の順番
+    "announce_order": ["gaikaex", "gaitame", "rakuten", "minfx"], // 読み上げる会社の順番
     "time_interval": 2, //データ更新頻度(秒)
     "force_anounce_per": 5, //データの更新の有無にかかわらず強制的に読み上げるデータ取得頻度. 0以下の場合はデータに変更がある場合のみ読み上げ
     "target_pair": "usdjpy", // 対象の通過ペア, "usdjpy" or "eurjpy" or "gbpjpy" or "audjpy" or "nzdjpy"
@@ -41,4 +41,5 @@ config.jsonが設定ファイルです。
 python src/all-pair/gaitame.py
 python src/all-pair/gaikaex.py
 python src/all-pair/rakuten.py
+python src/all-pair/minfx.py
 ```

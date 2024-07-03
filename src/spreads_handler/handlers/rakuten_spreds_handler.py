@@ -70,7 +70,6 @@ class RakutenSpreadsHandler(SpreadsHandler):
 
             if target_pair_name == pair_name:
                 spread_dom = td_list[3]
-                target_pair_name
                 spread = None
                 if spread_dom:
                     spread = spread_dom.text
@@ -117,7 +116,7 @@ class RakutenSpreadsHandler(SpreadsHandler):
                 spread = None
                 if spread_dom:
                     spread = spread_dom.text
-                spread_dict = { 'pair': '------', 'pair_name': pair_name, 'spread': spread, 'publisher': 'rakuten' }
+                spread_dict = { 'pair': self.pair, 'pair_name': pair_name, 'spread': spread, 'publisher': 'rakuten' }
                 if self.logging:
                     print(spread_dict)
                 #if pair_name == "ドル/円":
@@ -154,7 +153,7 @@ class RakutenSpreadsHandler(SpreadsHandler):
             spread = None
             if spread_dom:
                 spread = spread_dom.text
-            spread_dict = { 'pair': '------', 'pair_name': pair_name, 'spread': spread, 'publisher': 'rakuten' }
+            spread_dict = { 'pair': self.pair, 'pair_name': pair_name, 'spread': spread, 'publisher': 'rakuten' }
             if self.logging:
                     print(spread_dict)
             spread_list.append(spread_dict)
@@ -182,7 +181,7 @@ class RakutenSpreadsHandler(SpreadsHandler):
             spread = None
             if spread_dom:
                 spread = spread_dom.text
-            spread_dict = { 'pair': '------', 'pair_name': pair_name, 'spread': spread, 'publisher': 'rakuten' }
+            spread_dict = { 'pair': self.pair, 'pair_name': pair_name, 'spread': spread, 'publisher': 'rakuten' }
             if self.logging:
                 print(spread_dict)
             spread_list.append(spread_dict)

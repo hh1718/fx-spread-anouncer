@@ -10,6 +10,7 @@ from anouncer import Anouncer
 from handlers.gaikaex_spreds_handler import GaikaexSpreadsHandler
 from handlers.gaitame_spreds_handler import GaitameSpreadsHandler
 from handlers.rakuten_spreds_handler import RakutenSpreadsHandler
+from handlers.minfx_spreds_handler import MinFxSpreadsHandler
 
 
 def main():
@@ -33,6 +34,8 @@ def main():
             handlers.append({ "key": key, "handler": GaitameSpreadsHandler(pair, logging) })
         elif key == "rakuten":
             handlers.append({ "key": key, "handler": RakutenSpreadsHandler(pair, logging) })
+        elif key == "minfx":
+            handlers.append({ "key": key, "handler": MinFxSpreadsHandler(pair, logging) })
     anouncer = Anouncer()
     i = 1
     while True:

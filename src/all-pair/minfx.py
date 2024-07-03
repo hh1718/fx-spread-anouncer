@@ -3,19 +3,18 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '../packages'))
 sys.path.append(os.path.join(os.path.dirname(__file__), '../spreads_handler'))
 sys.path.append(os.path.join(os.path.dirname(__file__), '../../src'))
 import time
-from handlers.gaikaex_spreds_handler import GaikaexSpreadsHandler
+from handlers.minfx_spreds_handler import MinFxSpreadsHandler
 from config import Config
 from anouncer import Anouncer
 
 cfg = Config("./config.json")
 anouncer = Anouncer()
 current_spread_list = []
-handler = GaikaexSpreadsHandler(cfg.pair, cfg.logging)
+handler = MinFxSpreadsHandler(cfg.pair, cfg.logging)
 
 while True:
     try:
         spred_list = handler.get_spread_list()
-
         for spread_dict in spred_list:
             pair_name = spread_dict['pair_name']
             spread = spread_dict['spread']

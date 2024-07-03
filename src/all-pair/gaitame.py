@@ -10,7 +10,7 @@ from anouncer import Anouncer
 cfg = Config("./config.json")
 anouncer = Anouncer()
 current_spread_list = []
-handler = GaitameSpreadsHandler("usdjpy")
+handler = GaitameSpreadsHandler(cfg.pair, cfg.logging)
 
 while True:
     try:

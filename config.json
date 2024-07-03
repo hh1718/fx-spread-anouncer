@@ -1,5 +1,5 @@
 {
-    "announce_order": ["gaikaex", "gaitame", "rakuten"],
+    "announce_order": ["gaitame", "rakuten", "minfx"],
     "time_interval": 0.1,
     "force_anounce_per": 5,
     "target_pair": "nzdjpy",

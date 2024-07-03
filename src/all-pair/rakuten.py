@@ -10,7 +10,7 @@ from anouncer import Anouncer
 cfg = Config("./config.json")
 anouncer = Anouncer()
 current_spread_list = []
-handler = RakutenSpreadsHandler(cfg.pair)
+handler = RakutenSpreadsHandler(cfg.pair, cfg.logging)
 #lastbid = None
 while True:
     try:
