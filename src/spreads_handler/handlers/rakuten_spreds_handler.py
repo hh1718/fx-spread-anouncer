@@ -38,8 +38,7 @@ class RakutenSpreadsHandler(SpreadsHandler):
         url = "https://www.rakuten-sec.co.jp/web/market/fisco/list.html"
         r = requests.get(url, params={})
         if r.status_code != 200:
-            print("error: " + str(r.status_code))
-            return
+            raise ValueError("can not connect to rakuten data source," + str(r.status_code))
         options = Options()
         options.add_argument('--ignore-certificate-errors')
         options.add_argument('--ignore-ssl-errors')

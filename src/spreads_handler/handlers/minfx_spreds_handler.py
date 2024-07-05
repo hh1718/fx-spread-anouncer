@@ -37,8 +37,7 @@ class MinFxSpreadsHandler(SpreadsHandler):
         url = "https://min-fx.jp/market/rate/"
         r = requests.get(url, params={})
         if r.status_code != 200:
-            print("error: " + str(r.status_code))
-            return
+            raise ValueError("can not connect to minfx data source," + str(r.status_code))
         options = Options()
         options.add_argument('--ignore-certificate-errors')
         options.add_argument('--ignore-ssl-errors')

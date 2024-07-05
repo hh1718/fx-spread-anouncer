@@ -22,9 +22,7 @@ class GaitameSpreadsHandler(SpreadsHandler):
         url = "https://www.gaitame.com/markets/rate/"
         r = requests.get(url, params={})
         if r.status_code != 200:
-            print("error: " + str(r.status_code))
-            return
-
+            raise ValueError("can not connect to gaitame data source," + str(r.status_code))
         options = Options()
         options.add_argument('--ignore-certificate-errors')
         options.add_argument('--ignore-ssl-errors')
